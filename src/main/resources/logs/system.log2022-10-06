@@ -1,0 +1,977 @@
+[12:23:12][INFO ][ContextLoader.java:271]- Root WebApplicationContext: initialization started
+[12:23:15][INFO ][ContextLoader.java:307]- Root WebApplicationContext initialized in 2425 ms
+[12:23:15][INFO ][FrameworkServlet.java:525]- Initializing Servlet 'appServlet'
+[12:23:17][INFO ][FrameworkServlet.java:547]- Completed initialization in 1885 ms
+[12:23:29][INFO ][Slf4jSpyLogDelegator.java:524]- 1. Connection opened
+[12:23:29][INFO ][Slf4jSpyLogDelegator.java:524]- 2. Connection opened
+[12:23:29][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.new Connection returned 
+[12:23:29][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.new Connection returned 
+[12:23:29][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.getAutoCommit() returned true
+[12:23:29][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.getAutoCommit() returned true
+[12:23:29][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.new PreparedStatement returned 
+[12:23:29][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.new PreparedStatement returned 
+[12:23:29][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.prepareStatement(select * 
+			from (select rownum rnum, noticeno, noticetitle, noticedate
+       				 from (select * from notice order by noticedate desc, noticeno desc))
+			where rnum >= 1 and rnum <= 3) returned net.sf.log4jdbc.PreparedStatementSpy@4d76601d
+[12:23:29][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.prepareStatement(select * 
+			from (select rownum rnum, board_num, board_title, board_readcount
+       				 from (select * from board where board_lev = 1
+       				 order by board_readcount desc))
+			where rnum >= 1 and rnum <= 3) returned net.sf.log4jdbc.PreparedStatementSpy@195c7ac4
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:357]- select * from (select rownum rnum, noticeno, noticetitle, noticedate from (select * from notice 
+order by noticedate desc, noticeno desc)) where rnum >= 1 and rnum <= 3  {executed in 198 msec}
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.execute() returned true
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:357]- select * from (select rownum rnum, board_num, board_title, board_readcount from (select * from 
+board where board_lev = 1 order by board_readcount desc)) where rnum >= 1 and rnum <= 3  {executed in 198 msec}
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.execute() returned true
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.new ResultSet returned 
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@12b68a4b
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.new ResultSet returned 
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@2e825647
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@3172eeb1
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@98b5946
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getType() returned 1003
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.isClosed() returned false
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.next() returned true
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getType() returned 1003
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.isClosed() returned false
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.next() returned true
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getInt(noticeno) returned 9
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getInt(board_num) returned 13
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticetitle) returned 새공지글
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(board_title) returned 설계방식3
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getDate(noticedate) returned 2022-09-28
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getInt(board_readcount) returned 11
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.isClosed() returned false
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.next() returned true
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.isClosed() returned false
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getInt(noticeno) returned 8
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.next() returned true
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticetitle) returned 새공지글
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getInt(board_num) returned 12
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getDate(noticedate) returned 2022-09-23
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.isClosed() returned false
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.next() returned true
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(board_title) returned 설계방식2
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getInt(noticeno) returned 7
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticetitle) returned 공지 서비스 오픈7
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getInt(board_readcount) returned 8
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getDate(noticedate) returned 2022-09-21
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.isClosed() returned false
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.isClosed() returned false
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.next() returned true
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getInt(board_num) returned 19
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(board_title) returned 원글 등록
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getInt(board_readcount) returned 4
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.isClosed() returned false
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.next() returned false
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.next() returned false
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.close() returned null
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.close() returned null
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@638de656
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@76527ab
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@2da5a82
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@1ffab694
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.close() returned 
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.close() returned 
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:543]- 1. Connection closed
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.close() returned 
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:543]- 2. Connection closed
+[12:23:30][INFO ][NoticeController.java:72]- ntop3.do : 3
+[12:23:30][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.close() returned 
+[12:23:30][INFO ][BoardController.java:44]- btop3.do : 3
+[12:23:38][INFO ][MemberController.java:125]- login.do  : Member [userid=admin, userpwd=admin, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:524]- 3. Connection opened
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. Connection.new Connection returned 
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. Connection.getAutoCommit() returned true
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. PreparedStatement.new PreparedStatement returned 
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. Connection.prepareStatement(select * from member where userid = ?) returned net.sf.log4jdbc.PreparedStatementSpy@9dbbf14
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. PreparedStatement.setString(1, "admin") returned 
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:357]- select * from member where userid = 'admin'  {executed in 11 msec}
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. PreparedStatement.execute() returned true
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.new ResultSet returned 
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@4d1614a6
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@7135be30
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.getType() returned 1003
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.isClosed() returned false
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.next() returned true
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.getString(USERID) returned admin
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.getString(USERPWD) returned $2a$10$Xt483NZdD0wazCGsyB4E9uQRr35jHJSQXAl19kwfap6xJVjsFBo1i
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.getString(USERNAME) returned 관리자
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.getString(GENDER) returned M
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.getInt(AGE) returned 35
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.getString(PHONE) returned 01011119999
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.getString(EMAIL) returned admin@ncs.kr
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.getString(HOBBY) returned game,reading,music,other
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.getString(ETC) returned 관리자입니다
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.getDate(ENROLL_DATE) returned 2022-09-15
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.getDate(LASTMODIFIED) returned 2022-09-15
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.getString(LOGIN_OK) returned Y
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.getString(ADMIN) returned Y
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.isClosed() returned false
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.next() returned false
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.close() returned null
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@474fe062
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@1ffab694
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. PreparedStatement.close() returned 
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:543]- 3. Connection closed
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 3. Connection.close() returned 
+[12:23:38][INFO ][MemberController.java:144]- sessionID : BF5DD88BBA9410FFA35E708B42B09903
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:524]- 4. Connection opened
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. Connection.new Connection returned 
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. Connection.getAutoCommit() returned true
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:524]- 5. Connection opened
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. PreparedStatement.new PreparedStatement returned 
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. Connection.new Connection returned 
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. Connection.prepareStatement(select * 
+			from (select rownum rnum, noticeno, noticetitle, noticedate
+       				 from (select * from notice order by noticedate desc, noticeno desc))
+			where rnum >= 1 and rnum <= 3) returned net.sf.log4jdbc.PreparedStatementSpy@5362f5ce
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. Connection.getAutoCommit() returned true
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. PreparedStatement.new PreparedStatement returned 
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. Connection.prepareStatement(select * 
+			from (select rownum rnum, board_num, board_title, board_readcount
+       				 from (select * from board where board_lev = 1
+       				 order by board_readcount desc))
+			where rnum >= 1 and rnum <= 3) returned net.sf.log4jdbc.PreparedStatementSpy@14f1c8d3
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:357]- select * from (select rownum rnum, noticeno, noticetitle, noticedate from (select * from notice 
+order by noticedate desc, noticeno desc)) where rnum >= 1 and rnum <= 3  {executed in 1 msec}
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. PreparedStatement.execute() returned true
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.new ResultSet returned 
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@3abdd11f
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@1c71ffc2
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:357]- select * from (select rownum rnum, board_num, board_title, board_readcount from (select * from 
+board where board_lev = 1 order by board_readcount desc)) where rnum >= 1 and rnum <= 3  {executed in 1 msec}
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. PreparedStatement.execute() returned true
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getType() returned 1003
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.new ResultSet returned 
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.isClosed() returned false
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@36772872
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.next() returned true
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@62f8e252
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getInt(noticeno) returned 9
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.getType() returned 1003
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getString(noticetitle) returned 새공지글
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.isClosed() returned false
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getDate(noticedate) returned 2022-09-28
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.next() returned true
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.isClosed() returned false
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.getInt(board_num) returned 13
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.next() returned true
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.getString(board_title) returned 설계방식3
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getInt(noticeno) returned 8
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.getInt(board_readcount) returned 11
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getString(noticetitle) returned 새공지글
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.isClosed() returned false
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.next() returned true
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getDate(noticedate) returned 2022-09-23
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.getInt(board_num) returned 12
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.isClosed() returned false
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.getString(board_title) returned 설계방식2
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.next() returned true
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.getInt(board_readcount) returned 8
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.isClosed() returned false
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getInt(noticeno) returned 7
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.next() returned true
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getString(noticetitle) returned 공지 서비스 오픈7
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.getInt(board_num) returned 19
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getDate(noticedate) returned 2022-09-21
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.getString(board_title) returned 원글 등록
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.isClosed() returned false
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.getInt(board_readcount) returned 4
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.isClosed() returned false
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.next() returned false
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.close() returned null
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.next() returned false
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@13a49122
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.close() returned null
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@1ffab694
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@6e882734
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. PreparedStatement.close() returned 
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@2da5a82
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:543]- 4. Connection closed
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 4. Connection.close() returned 
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. PreparedStatement.close() returned 
+[12:23:38][INFO ][NoticeController.java:72]- ntop3.do : 3
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:543]- 5. Connection closed
+[12:23:38][INFO ][Slf4jSpyLogDelegator.java:171]- 5. Connection.close() returned 
+[12:23:38][INFO ][BoardController.java:44]- btop3.do : 3
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:524]- 6. Connection opened
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 6. Connection.new Connection returned 
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 6. Connection.getAutoCommit() returned true
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 6. PreparedStatement.new PreparedStatement returned 
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 6. Connection.prepareStatement(select count(*) from board) returned net.sf.log4jdbc.PreparedStatementSpy@40632ffe
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:357]- select count(*) from board  {executed in 3 msec}
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 6. PreparedStatement.execute() returned true
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 6. ResultSet.new ResultSet returned 
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 6. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@18da7ae3
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 6. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@534ce11c
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 6. ResultSet.getType() returned 1003
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 6. ResultSet.isClosed() returned false
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 6. ResultSet.next() returned true
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 6. ResultSet.getInt(COUNT(*)) returned 18
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 6. ResultSet.isClosed() returned false
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 6. ResultSet.next() returned false
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 6. ResultSet.close() returned null
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 6. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@36d10cb2
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 6. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@2da5a82
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 6. PreparedStatement.close() returned 
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:543]- 6. Connection closed
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 6. Connection.close() returned 
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:524]- 7. Connection opened
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. Connection.new Connection returned 
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. Connection.getAutoCommit() returned true
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. PreparedStatement.new PreparedStatement returned 
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. Connection.prepareStatement(select * 
+			from (select rownum rnum, board_num, board_title, 
+				board_writer, board_content, board_original_filename, 
+				board_rename_filename, board_date, board_lev, 
+				board_ref, board_reply_ref, board_reply_seq, board_readcount
+				from (select * from board
+						order by board_ref desc, board_reply_ref desc, board_lev asc, board_reply_seq asc))
+			where rnum >= ? and rnum <= ?) returned net.sf.log4jdbc.PreparedStatementSpy@7d1765e9
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. PreparedStatement.setInt(1, 1) returned 
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. PreparedStatement.setInt(2, 10) returned 
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:357]- select * from (select rownum rnum, board_num, board_title, board_writer, board_content, board_original_filename, 
+board_rename_filename, board_date, board_lev, board_ref, board_reply_ref, board_reply_seq, 
+board_readcount from (select * from board order by board_ref desc, board_reply_ref desc, board_lev 
+asc, board_reply_seq asc)) where rnum >= 1 and rnum <= 10  {executed in 4 msec}
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. PreparedStatement.execute() returned true
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.new ResultSet returned 
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@7f0fe213
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@5aee10d7
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getType() returned 1003
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.isClosed() returned false
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.next() returned true
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_num) returned 19
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_writer) returned admin
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_title) returned 원글 등록
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_content) returned 실습문제
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_original_filename) returned 연습문제2.txt
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_rename_filename) returned 연습문제2.txt
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_ref) returned 19
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_reply_ref) returned 0
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.wasNull() returned true
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_lev) returned 1
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_reply_seq) returned 1
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_readcount) returned 4
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getDate(board_date) returned 2022-09-30
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.isClosed() returned false
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.next() returned true
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_num) returned 13
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_writer) returned user01
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_title) returned 설계방식3
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_content) returned 3번째 방식은 액션을 이용하는 방식입니다.
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_original_filename) returned null
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_rename_filename) returned null
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_ref) returned 13
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_reply_ref) returned 0
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.wasNull() returned true
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_lev) returned 1
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_reply_seq) returned 1
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_readcount) returned 11
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getDate(board_date) returned 2022-09-27
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.isClosed() returned false
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.next() returned true
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_num) returned 12
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_writer) returned user02
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_title) returned 설계방식2
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_content) returned 설계방식 2번째로는 First Controller 를 사용하는 방식이 있습니다.
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_original_filename) returned null
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_rename_filename) returned null
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_ref) returned 12
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_reply_ref) returned 0
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.wasNull() returned true
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_lev) returned 1
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_reply_seq) returned 1
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_readcount) returned 8
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getDate(board_date) returned 2022-09-27
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.isClosed() returned false
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.next() returned true
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_num) returned 18
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_writer) returned user01
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_title) returned 댓글 등록 수정
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_content) returned 댓글 달기 테스트 수정
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_original_filename) returned null
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_rename_filename) returned null
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_ref) returned 12
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_reply_ref) returned 18
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_lev) returned 2
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_reply_seq) returned 1
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_readcount) returned 7
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getDate(board_date) returned 2022-09-28
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.isClosed() returned false
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.next() returned true
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_num) returned 20
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_writer) returned admin
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_title) returned 새 댓글 
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_content) returned 테스트
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_original_filename) returned null
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_rename_filename) returned null
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_ref) returned 12
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_reply_ref) returned 18
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_lev) returned 3
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_reply_seq) returned 1
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_readcount) returned 1
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getDate(board_date) returned 2022-09-30
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.isClosed() returned false
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.next() returned true
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_num) returned 14
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_writer) returned user01
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_title) returned 댓글 등록
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_content) returned 새 듯글 올려봐요
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_original_filename) returned null
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_rename_filename) returned null
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_ref) returned 12
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_reply_ref) returned 14
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_lev) returned 2
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_reply_seq) returned 2
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_readcount) returned 3
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getDate(board_date) returned 2022-09-28
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.isClosed() returned false
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.next() returned true
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_num) returned 15
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_writer) returned admin
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_title) returned 2번째 댓글
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_content) returned 대댓글 등록 올려요
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_original_filename) returned null
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_rename_filename) returned null
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_ref) returned 12
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_reply_ref) returned 14
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_lev) returned 3
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_reply_seq) returned 2
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_readcount) returned 1
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getDate(board_date) returned 2022-09-28
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.isClosed() returned false
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.next() returned true
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_num) returned 11
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_writer) returned user01
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_title) returned MVC Model2
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_content) returned 웹 어플리케이션 설계 방식 중 MVC 디자인 패턴 모델2 방식의 한 유형입니다.
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_original_filename) returned null
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_rename_filename) returned null
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_ref) returned 11
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_reply_ref) returned 0
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.wasNull() returned true
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_lev) returned 1
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_reply_seq) returned 1
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_readcount) returned 3
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getDate(board_date) returned 2022-09-27
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.isClosed() returned false
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.next() returned true
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_num) returned 10
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_writer) returned user01
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_title) returned 설계방식3
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_content) returned 3번째 방식은 액션을 이용하는 방식입니다.
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_original_filename) returned null
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_rename_filename) returned null
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_ref) returned 10
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_reply_ref) returned 0
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.wasNull() returned true
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_lev) returned 1
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_reply_seq) returned 1
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_readcount) returned 1
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getDate(board_date) returned 2022-09-27
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.isClosed() returned false
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.next() returned true
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_num) returned 9
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_writer) returned user02
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_title) returned 설계방식2
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_content) returned 설계방식 2번째로는 First Controller 를 사용하는 방식이 있습니다.
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_original_filename) returned null
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(board_rename_filename) returned null
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_ref) returned 9
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_reply_ref) returned 0
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.wasNull() returned true
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_lev) returned 1
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_reply_seq) returned 1
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(board_readcount) returned 1
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getDate(board_date) returned 2022-09-27
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.isClosed() returned false
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.next() returned false
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.close() returned null
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@3ea48202
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@2da5a82
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. PreparedStatement.close() returned 
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:543]- 7. Connection closed
+[12:23:40][INFO ][Slf4jSpyLogDelegator.java:171]- 7. Connection.close() returned 
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:524]- 8. Connection opened
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 8. Connection.new Connection returned 
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 8. Connection.getAutoCommit() returned true
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 8. PreparedStatement.new PreparedStatement returned 
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 8. Connection.prepareStatement(select count(*) from board) returned net.sf.log4jdbc.PreparedStatementSpy@4edba43e
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:357]- select count(*) from board  {executed in 1 msec}
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 8. PreparedStatement.execute() returned true
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 8. ResultSet.new ResultSet returned 
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 8. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@401c5395
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 8. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@4423cf4e
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 8. ResultSet.getType() returned 1003
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 8. ResultSet.isClosed() returned false
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 8. ResultSet.next() returned true
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 8. ResultSet.getInt(COUNT(*)) returned 18
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 8. ResultSet.isClosed() returned false
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 8. ResultSet.next() returned false
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 8. ResultSet.close() returned null
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 8. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@1248e7e0
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 8. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@2da5a82
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 8. PreparedStatement.close() returned 
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:543]- 8. Connection closed
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 8. Connection.close() returned 
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:524]- 9. Connection opened
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. Connection.new Connection returned 
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. Connection.getAutoCommit() returned true
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. PreparedStatement.new PreparedStatement returned 
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. Connection.prepareStatement(select * 
+			from (select rownum rnum, board_num, board_title, 
+				board_writer, board_content, board_original_filename, 
+				board_rename_filename, board_date, board_lev, 
+				board_ref, board_reply_ref, board_reply_seq, board_readcount
+				from (select * from board
+						order by board_ref desc, board_reply_ref desc, board_lev asc, board_reply_seq asc))
+			where rnum >= ? and rnum <= ?) returned net.sf.log4jdbc.PreparedStatementSpy@30ea9ec7
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. PreparedStatement.setInt(1, 1) returned 
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. PreparedStatement.setInt(2, 10) returned 
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:357]- select * from (select rownum rnum, board_num, board_title, board_writer, board_content, board_original_filename, 
+board_rename_filename, board_date, board_lev, board_ref, board_reply_ref, board_reply_seq, 
+board_readcount from (select * from board order by board_ref desc, board_reply_ref desc, board_lev 
+asc, board_reply_seq asc)) where rnum >= 1 and rnum <= 10  {executed in 1 msec}
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. PreparedStatement.execute() returned true
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.new ResultSet returned 
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@6a697e2b
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@610ea6e1
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getType() returned 1003
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.isClosed() returned false
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.next() returned true
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_num) returned 19
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_writer) returned admin
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_title) returned 원글 등록
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_content) returned 실습문제
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_original_filename) returned 연습문제2.txt
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_rename_filename) returned 연습문제2.txt
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_ref) returned 19
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_reply_ref) returned 0
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.wasNull() returned true
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_lev) returned 1
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_reply_seq) returned 1
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_readcount) returned 4
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getDate(board_date) returned 2022-09-30
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.isClosed() returned false
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.next() returned true
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_num) returned 13
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_writer) returned user01
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_title) returned 설계방식3
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_content) returned 3번째 방식은 액션을 이용하는 방식입니다.
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_original_filename) returned null
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_rename_filename) returned null
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_ref) returned 13
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_reply_ref) returned 0
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.wasNull() returned true
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_lev) returned 1
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_reply_seq) returned 1
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_readcount) returned 11
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getDate(board_date) returned 2022-09-27
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.isClosed() returned false
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.next() returned true
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_num) returned 12
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_writer) returned user02
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_title) returned 설계방식2
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_content) returned 설계방식 2번째로는 First Controller 를 사용하는 방식이 있습니다.
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_original_filename) returned null
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_rename_filename) returned null
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_ref) returned 12
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_reply_ref) returned 0
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.wasNull() returned true
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_lev) returned 1
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_reply_seq) returned 1
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_readcount) returned 8
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getDate(board_date) returned 2022-09-27
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.isClosed() returned false
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.next() returned true
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_num) returned 18
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_writer) returned user01
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_title) returned 댓글 등록 수정
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_content) returned 댓글 달기 테스트 수정
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_original_filename) returned null
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_rename_filename) returned null
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_ref) returned 12
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_reply_ref) returned 18
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_lev) returned 2
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_reply_seq) returned 1
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_readcount) returned 7
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getDate(board_date) returned 2022-09-28
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.isClosed() returned false
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.next() returned true
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_num) returned 20
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_writer) returned admin
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_title) returned 새 댓글 
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_content) returned 테스트
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_original_filename) returned null
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_rename_filename) returned null
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_ref) returned 12
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_reply_ref) returned 18
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_lev) returned 3
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_reply_seq) returned 1
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_readcount) returned 1
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getDate(board_date) returned 2022-09-30
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.isClosed() returned false
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.next() returned true
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_num) returned 14
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_writer) returned user01
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_title) returned 댓글 등록
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_content) returned 새 듯글 올려봐요
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_original_filename) returned null
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_rename_filename) returned null
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_ref) returned 12
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_reply_ref) returned 14
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_lev) returned 2
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_reply_seq) returned 2
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_readcount) returned 3
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getDate(board_date) returned 2022-09-28
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.isClosed() returned false
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.next() returned true
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_num) returned 15
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_writer) returned admin
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_title) returned 2번째 댓글
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_content) returned 대댓글 등록 올려요
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_original_filename) returned null
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_rename_filename) returned null
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_ref) returned 12
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_reply_ref) returned 14
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_lev) returned 3
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_reply_seq) returned 2
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_readcount) returned 1
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getDate(board_date) returned 2022-09-28
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.isClosed() returned false
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.next() returned true
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_num) returned 11
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_writer) returned user01
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_title) returned MVC Model2
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_content) returned 웹 어플리케이션 설계 방식 중 MVC 디자인 패턴 모델2 방식의 한 유형입니다.
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_original_filename) returned null
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_rename_filename) returned null
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_ref) returned 11
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_reply_ref) returned 0
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.wasNull() returned true
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_lev) returned 1
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_reply_seq) returned 1
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_readcount) returned 3
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getDate(board_date) returned 2022-09-27
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.isClosed() returned false
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.next() returned true
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_num) returned 10
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_writer) returned user01
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_title) returned 설계방식3
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_content) returned 3번째 방식은 액션을 이용하는 방식입니다.
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_original_filename) returned null
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_rename_filename) returned null
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_ref) returned 10
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_reply_ref) returned 0
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.wasNull() returned true
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_lev) returned 1
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_reply_seq) returned 1
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_readcount) returned 1
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getDate(board_date) returned 2022-09-27
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.isClosed() returned false
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.next() returned true
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_num) returned 9
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_writer) returned user02
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_title) returned 설계방식2
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_content) returned 설계방식 2번째로는 First Controller 를 사용하는 방식이 있습니다.
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_original_filename) returned null
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(board_rename_filename) returned null
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_ref) returned 9
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_reply_ref) returned 0
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.wasNull() returned true
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_lev) returned 1
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_reply_seq) returned 1
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(board_readcount) returned 1
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getDate(board_date) returned 2022-09-27
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.isClosed() returned false
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.next() returned false
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.close() returned null
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@63115903
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@2da5a82
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. PreparedStatement.close() returned 
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:543]- 9. Connection closed
+[12:23:47][INFO ][Slf4jSpyLogDelegator.java:171]- 9. Connection.close() returned 
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:524]- 10. Connection opened
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 10. Connection.new Connection returned 
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 10. Connection.getAutoCommit() returned true
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 10. PreparedStatement.new PreparedStatement returned 
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 10. Connection.prepareStatement(select count(*) from board) returned net.sf.log4jdbc.PreparedStatementSpy@67ac27fe
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:357]- select count(*) from board  {executed in 1 msec}
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 10. PreparedStatement.execute() returned true
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 10. ResultSet.new ResultSet returned 
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 10. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@79d1f69a
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 10. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@56010360
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 10. ResultSet.getType() returned 1003
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 10. ResultSet.isClosed() returned false
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 10. ResultSet.next() returned true
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 10. ResultSet.getInt(COUNT(*)) returned 18
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 10. ResultSet.isClosed() returned false
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 10. ResultSet.next() returned false
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 10. ResultSet.close() returned null
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 10. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@783d8b1
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 10. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@2da5a82
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 10. PreparedStatement.close() returned 
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:543]- 10. Connection closed
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 10. Connection.close() returned 
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:524]- 11. Connection opened
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. Connection.new Connection returned 
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. Connection.getAutoCommit() returned true
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. PreparedStatement.new PreparedStatement returned 
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. Connection.prepareStatement(select * 
+			from (select rownum rnum, board_num, board_title, 
+				board_writer, board_content, board_original_filename, 
+				board_rename_filename, board_date, board_lev, 
+				board_ref, board_reply_ref, board_reply_seq, board_readcount
+				from (select * from board
+						order by board_ref desc, board_reply_ref desc, board_lev asc, board_reply_seq asc))
+			where rnum >= ? and rnum <= ?) returned net.sf.log4jdbc.PreparedStatementSpy@71109bfd
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. PreparedStatement.setInt(1, 11) returned 
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. PreparedStatement.setInt(2, 20) returned 
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:357]- select * from (select rownum rnum, board_num, board_title, board_writer, board_content, board_original_filename, 
+board_rename_filename, board_date, board_lev, board_ref, board_reply_ref, board_reply_seq, 
+board_readcount from (select * from board order by board_ref desc, board_reply_ref desc, board_lev 
+asc, board_reply_seq asc)) where rnum >= 11 and rnum <= 20  {executed in 1 msec}
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. PreparedStatement.execute() returned true
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.new ResultSet returned 
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@2f549cbc
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@1a92a620
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getType() returned 1003
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.isClosed() returned false
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.next() returned true
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_num) returned 8
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_writer) returned user01
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_title) returned MVC Model2
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_content) returned 웹 어플리케이션 설계 방식 중 MVC 디자인 패턴 모델2 방식의 한 유형입니다.
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_original_filename) returned null
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_rename_filename) returned null
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_ref) returned 8
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_reply_ref) returned 0
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.wasNull() returned true
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_lev) returned 1
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_reply_seq) returned 1
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_readcount) returned 0
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.wasNull() returned false
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getDate(board_date) returned 2022-09-27
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.isClosed() returned false
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.next() returned true
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_num) returned 7
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_writer) returned user01
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_title) returned 설계방식3
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_content) returned 3번째 방식은 액션을 이용하는 방식입니다.
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_original_filename) returned null
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_rename_filename) returned null
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_ref) returned 7
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_reply_ref) returned 0
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.wasNull() returned true
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_lev) returned 1
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_reply_seq) returned 1
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_readcount) returned 0
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.wasNull() returned false
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getDate(board_date) returned 2022-09-27
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.isClosed() returned false
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.next() returned true
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_num) returned 6
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_writer) returned user02
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_title) returned 설계방식2
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_content) returned 설계방식 2번째로는 First Controller 를 사용하는 방식이 있습니다.
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_original_filename) returned null
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_rename_filename) returned null
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_ref) returned 6
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_reply_ref) returned 0
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.wasNull() returned true
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_lev) returned 1
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_reply_seq) returned 1
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_readcount) returned 0
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.wasNull() returned false
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getDate(board_date) returned 2022-09-27
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.isClosed() returned false
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.next() returned true
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_num) returned 5
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_writer) returned user01
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_title) returned MVC Model2
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_content) returned 웹 어플리케이션 설계 방식 중 MVC 디자인 패턴 모델2 방식의 한 유형입니다.
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_original_filename) returned null
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_rename_filename) returned null
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_ref) returned 5
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_reply_ref) returned 0
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.wasNull() returned true
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_lev) returned 1
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_reply_seq) returned 1
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_readcount) returned 0
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.wasNull() returned false
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getDate(board_date) returned 2022-09-27
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.isClosed() returned false
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.next() returned true
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_num) returned 4
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_writer) returned user01
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_title) returned 설계방식3
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_content) returned 3번째 방식은 액션을 이용하는 방식입니다.
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_original_filename) returned null
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_rename_filename) returned null
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_ref) returned 4
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_reply_ref) returned 0
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.wasNull() returned true
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_lev) returned 1
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_reply_seq) returned 1
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_readcount) returned 0
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.wasNull() returned false
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getDate(board_date) returned 2022-09-27
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.isClosed() returned false
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.next() returned true
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_num) returned 3
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_writer) returned user02
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_title) returned 설계방식2
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_content) returned 설계방식 2번째로는 First Controller 를 사용하는 방식이 있습니다.
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_original_filename) returned null
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_rename_filename) returned null
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_ref) returned 3
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_reply_ref) returned 0
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.wasNull() returned true
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_lev) returned 1
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_reply_seq) returned 1
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_readcount) returned 0
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.wasNull() returned false
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getDate(board_date) returned 2022-09-27
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.isClosed() returned false
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.next() returned true
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_num) returned 2
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_writer) returned user01
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_title) returned MVC Model2
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_content) returned 웹 어플리케이션 설계 방식 중 MVC 디자인 패턴 모델2 방식의 한 유형입니다.
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_original_filename) returned null
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_rename_filename) returned null
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_ref) returned 2
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_reply_ref) returned 0
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.wasNull() returned true
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_lev) returned 1
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_reply_seq) returned 1
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_readcount) returned 0
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.wasNull() returned false
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getDate(board_date) returned 2022-09-27
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.isClosed() returned false
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.next() returned true
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_num) returned 1
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_writer) returned admin
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_title) returned 관리자 게시글
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_content) returned 저희 사이트를 이용해 주셔서 감사합니다.
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_original_filename) returned null
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getString(board_rename_filename) returned null
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_ref) returned 1
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_reply_ref) returned 0
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.wasNull() returned true
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_lev) returned 1
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_reply_seq) returned 1
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getInt(board_readcount) returned 0
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.wasNull() returned false
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.getDate(board_date) returned 2022-09-27
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.isClosed() returned false
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.next() returned false
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. ResultSet.close() returned null
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@3cda393
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@2da5a82
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. PreparedStatement.close() returned 
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:543]- 11. Connection closed
+[12:32:29][INFO ][Slf4jSpyLogDelegator.java:171]- 11. Connection.close() returned 
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:524]- 12. Connection opened
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 12. Connection.new Connection returned 
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 12. Connection.getAutoCommit() returned true
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 12. PreparedStatement.new PreparedStatement returned 
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 12. Connection.prepareStatement(select count(*) from board) returned net.sf.log4jdbc.PreparedStatementSpy@62dc5971
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:357]- select count(*) from board  {executed in 1 msec}
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 12. PreparedStatement.execute() returned true
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 12. ResultSet.new ResultSet returned 
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 12. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@6c1bbb5a
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 12. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@68243201
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 12. ResultSet.getType() returned 1003
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 12. ResultSet.isClosed() returned false
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 12. ResultSet.next() returned true
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 12. ResultSet.getInt(COUNT(*)) returned 18
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 12. ResultSet.isClosed() returned false
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 12. ResultSet.next() returned false
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 12. ResultSet.close() returned null
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 12. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@2d317265
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 12. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@2da5a82
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 12. PreparedStatement.close() returned 
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:543]- 12. Connection closed
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 12. Connection.close() returned 
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:524]- 13. Connection opened
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. Connection.new Connection returned 
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. Connection.getAutoCommit() returned true
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. PreparedStatement.new PreparedStatement returned 
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. Connection.prepareStatement(select * 
+			from (select rownum rnum, board_num, board_title, 
+				board_writer, board_content, board_original_filename, 
+				board_rename_filename, board_date, board_lev, 
+				board_ref, board_reply_ref, board_reply_seq, board_readcount
+				from (select * from board
+						order by board_ref desc, board_reply_ref desc, board_lev asc, board_reply_seq asc))
+			where rnum >= ? and rnum <= ?) returned net.sf.log4jdbc.PreparedStatementSpy@1c41ddf2
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. PreparedStatement.setInt(1, 1) returned 
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. PreparedStatement.setInt(2, 10) returned 
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:357]- select * from (select rownum rnum, board_num, board_title, board_writer, board_content, board_original_filename, 
+board_rename_filename, board_date, board_lev, board_ref, board_reply_ref, board_reply_seq, 
+board_readcount from (select * from board order by board_ref desc, board_reply_ref desc, board_lev 
+asc, board_reply_seq asc)) where rnum >= 1 and rnum <= 10  {executed in 1 msec}
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. PreparedStatement.execute() returned true
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.new ResultSet returned 
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@55bc4041
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@4d094e2e
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getType() returned 1003
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.isClosed() returned false
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.next() returned true
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_num) returned 19
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_writer) returned admin
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_title) returned 원글 등록
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_content) returned 실습문제
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_original_filename) returned 연습문제2.txt
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_rename_filename) returned 연습문제2.txt
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_ref) returned 19
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_reply_ref) returned 0
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.wasNull() returned true
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_lev) returned 1
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_reply_seq) returned 1
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_readcount) returned 4
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getDate(board_date) returned 2022-09-30
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.isClosed() returned false
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.next() returned true
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_num) returned 13
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_writer) returned user01
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_title) returned 설계방식3
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_content) returned 3번째 방식은 액션을 이용하는 방식입니다.
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_original_filename) returned null
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_rename_filename) returned null
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_ref) returned 13
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_reply_ref) returned 0
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.wasNull() returned true
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_lev) returned 1
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_reply_seq) returned 1
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_readcount) returned 11
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getDate(board_date) returned 2022-09-27
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.isClosed() returned false
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.next() returned true
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_num) returned 12
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_writer) returned user02
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_title) returned 설계방식2
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_content) returned 설계방식 2번째로는 First Controller 를 사용하는 방식이 있습니다.
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_original_filename) returned null
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_rename_filename) returned null
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_ref) returned 12
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_reply_ref) returned 0
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.wasNull() returned true
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_lev) returned 1
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_reply_seq) returned 1
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_readcount) returned 8
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getDate(board_date) returned 2022-09-27
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.isClosed() returned false
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.next() returned true
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_num) returned 18
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_writer) returned user01
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_title) returned 댓글 등록 수정
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_content) returned 댓글 달기 테스트 수정
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_original_filename) returned null
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_rename_filename) returned null
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_ref) returned 12
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_reply_ref) returned 18
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_lev) returned 2
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_reply_seq) returned 1
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_readcount) returned 7
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getDate(board_date) returned 2022-09-28
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.isClosed() returned false
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.next() returned true
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_num) returned 20
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_writer) returned admin
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_title) returned 새 댓글 
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_content) returned 테스트
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_original_filename) returned null
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_rename_filename) returned null
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_ref) returned 12
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_reply_ref) returned 18
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_lev) returned 3
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_reply_seq) returned 1
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_readcount) returned 1
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getDate(board_date) returned 2022-09-30
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.isClosed() returned false
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.next() returned true
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_num) returned 14
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_writer) returned user01
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_title) returned 댓글 등록
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_content) returned 새 듯글 올려봐요
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_original_filename) returned null
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_rename_filename) returned null
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_ref) returned 12
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_reply_ref) returned 14
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_lev) returned 2
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_reply_seq) returned 2
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_readcount) returned 3
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getDate(board_date) returned 2022-09-28
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.isClosed() returned false
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.next() returned true
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_num) returned 15
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_writer) returned admin
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_title) returned 2번째 댓글
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_content) returned 대댓글 등록 올려요
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_original_filename) returned null
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_rename_filename) returned null
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_ref) returned 12
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_reply_ref) returned 14
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_lev) returned 3
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_reply_seq) returned 2
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_readcount) returned 1
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getDate(board_date) returned 2022-09-28
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.isClosed() returned false
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.next() returned true
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_num) returned 11
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_writer) returned user01
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_title) returned MVC Model2
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_content) returned 웹 어플리케이션 설계 방식 중 MVC 디자인 패턴 모델2 방식의 한 유형입니다.
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_original_filename) returned null
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_rename_filename) returned null
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_ref) returned 11
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_reply_ref) returned 0
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.wasNull() returned true
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_lev) returned 1
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_reply_seq) returned 1
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_readcount) returned 3
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getDate(board_date) returned 2022-09-27
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.isClosed() returned false
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.next() returned true
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_num) returned 10
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_writer) returned user01
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_title) returned 설계방식3
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_content) returned 3번째 방식은 액션을 이용하는 방식입니다.
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_original_filename) returned null
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_rename_filename) returned null
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_ref) returned 10
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_reply_ref) returned 0
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.wasNull() returned true
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_lev) returned 1
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_reply_seq) returned 1
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_readcount) returned 1
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getDate(board_date) returned 2022-09-27
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.isClosed() returned false
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.next() returned true
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_num) returned 9
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_writer) returned user02
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_title) returned 설계방식2
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_content) returned 설계방식 2번째로는 First Controller 를 사용하는 방식이 있습니다.
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_original_filename) returned null
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getString(board_rename_filename) returned null
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_ref) returned 9
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_reply_ref) returned 0
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.wasNull() returned true
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_lev) returned 1
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_reply_seq) returned 1
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getInt(board_readcount) returned 1
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.getDate(board_date) returned 2022-09-27
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.isClosed() returned false
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.next() returned false
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. ResultSet.close() returned null
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@6b0dafb0
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@2da5a82
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. PreparedStatement.close() returned 
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:543]- 13. Connection closed
+[12:32:37][INFO ][Slf4jSpyLogDelegator.java:171]- 13. Connection.close() returned 

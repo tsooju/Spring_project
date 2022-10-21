@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE configuration PUBLIC
+"-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- mybatis을 통한 sql은 null 처리를 못한다. null하면 nullpoint Exception 나온다. 그래서 다음과 같은 작업을 한다. -->
+	<settings>
+		<setting name="jdbcTypeForNull" value="NULL"/>
+		<setting name="cacheEnabled" value="false"/>
+	</settings>
+	<typeAliases>
+		<!-- <typeAlias
+		type="mybatissample01.CityInfo"
+		alias="CityInfo" /> -->
+		<!-- typeAlias는 선택적으로 작성 -->
+		<typeAlias type="com.test.first.member.model.vo.Member" alias="Member" />
+		<typeAlias type="com.test.first.notice.model.vo.Notice" alias="Notice" />
+		<typeAlias type="com.test.first.board.model.vo.Board" alias="Board" />
+		<typeAlias type="com.test.first.common.SearchDate" alias="SearchDate" />
+		<typeAlias type="com.test.first.common.Paging" alias="Paging" />
+	</typeAliases>
+	<!-- <environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver" />
+				<property name="url" value="jdbc:mysql://localhost:3306/world" />
+				<property name="username" value="root" />
+				<property name="password" value="root" />
+			</dataSource>
+		</environment>
+	</environments> -->
+	<mappers>
+	<!-- mapper는 필수 입력이다. sql query문을 위한 mapper-->
+		<mapper resource="mappers/member-mapper.xml" />
+		<mapper resource="mappers/notice-mapper.xml" />
+		<mapper resource="mappers/board-mapper.xml" />
+	</mappers>
+</configuration>

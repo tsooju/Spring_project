@@ -1,0 +1,799 @@
+[09:54:39][INFO ][ContextLoader.java:271]- Root WebApplicationContext: initialization started
+[09:54:41][INFO ][ContextLoader.java:307]- Root WebApplicationContext initialized in 1388 ms
+[09:54:41][INFO ][FrameworkServlet.java:525]- Initializing Servlet 'appServlet'
+[09:54:43][INFO ][FrameworkServlet.java:547]- Completed initialization in 1898 ms
+[09:54:55][INFO ][Slf4jSpyLogDelegator.java:524]- 1. Connection opened
+[09:54:55][INFO ][Slf4jSpyLogDelegator.java:524]- 2. Connection opened
+[09:54:55][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.new Connection returned 
+[09:54:55][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.new Connection returned 
+[09:54:55][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.getAutoCommit() returned true
+[09:54:55][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.getAutoCommit() returned true
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.new PreparedStatement returned 
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.prepareStatement(select * 
+			from (select rownum rnum, board_num, board_title, board_readcount
+       				 from (select * from board where board_lev = 1
+       				 order by board_readcount desc))
+			where rnum >= 1 and rnum <= 3) returned net.sf.log4jdbc.PreparedStatementSpy@799bf48d
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.new PreparedStatement returned 
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.prepareStatement(select * 
+			from (select rownum rnum, noticeno, noticetitle, noticedate
+       				 from (select * from notice order by noticedate desc, noticeno desc))
+			where rnum >= 1 and rnum <= 3) returned net.sf.log4jdbc.PreparedStatementSpy@5f35d4e1
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:357]- select * from (select rownum rnum, noticeno, noticetitle, noticedate from (select * from notice 
+order by noticedate desc, noticeno desc)) where rnum >= 1 and rnum <= 3  {executed in 199 msec}
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:357]- select * from (select rownum rnum, board_num, board_title, board_readcount from (select * from 
+board where board_lev = 1 order by board_readcount desc)) where rnum >= 1 and rnum <= 3  {executed in 200 msec}
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.execute() returned true
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.execute() returned true
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.new ResultSet returned 
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@202faa29
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.new ResultSet returned 
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@2c12ed61
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@78ae21fd
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@631c96ba
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getType() returned 1003
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.isClosed() returned false
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.next() returned true
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getType() returned 1003
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.isClosed() returned false
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.next() returned true
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getInt(noticeno) returned 9
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getInt(board_num) returned 13
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticetitle) returned 새공지글
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(board_title) returned 설계방식3
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getDate(noticedate) returned 2022-09-28
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getInt(board_readcount) returned 11
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.isClosed() returned false
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.isClosed() returned false
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.next() returned true
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.next() returned true
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getInt(board_num) returned 12
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getInt(noticeno) returned 8
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(board_title) returned 설계방식2
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getInt(board_readcount) returned 8
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.isClosed() returned false
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.next() returned true
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticetitle) returned 새공지글
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getInt(board_num) returned 19
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(board_title) returned 원글 등록
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getInt(board_readcount) returned 4
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.isClosed() returned false
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getDate(noticedate) returned 2022-09-23
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.isClosed() returned false
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.next() returned true
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getInt(noticeno) returned 7
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticetitle) returned 공지 서비스 오픈7
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getDate(noticedate) returned 2022-09-21
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.isClosed() returned false
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.next() returned false
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.next() returned false
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.close() returned null
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.close() returned null
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@1512ff99
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@188e33e4
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@4b0c8795
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@45538e
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.close() returned 
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.close() returned 
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:543]- 1. Connection closed
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:543]- 2. Connection closed
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.close() returned 
+[09:54:56][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.close() returned 
+[09:54:56][INFO ][BoardController.java:44]- btop3.do : 3
+[09:54:56][INFO ][NoticeController.java:72]- ntop3.do : 3
+[10:45:09][INFO ][ContextLoader.java:271]- Root WebApplicationContext: initialization started
+[10:45:10][INFO ][ContextLoader.java:307]- Root WebApplicationContext initialized in 1317 ms
+[10:45:10][INFO ][FrameworkServlet.java:525]- Initializing Servlet 'appServlet'
+[10:45:12][INFO ][FrameworkServlet.java:547]- Completed initialization in 1903 ms
+[11:51:04][INFO ][ContextLoader.java:271]- Root WebApplicationContext: initialization started
+[11:51:05][INFO ][ContextLoader.java:307]- Root WebApplicationContext initialized in 1309 ms
+[11:51:05][INFO ][FrameworkServlet.java:525]- Initializing Servlet 'appServlet'
+[11:51:07][INFO ][FrameworkServlet.java:547]- Completed initialization in 1849 ms
+[11:51:10][INFO ][Slf4jSpyLogDelegator.java:524]- 1. Connection opened
+[11:51:10][INFO ][Slf4jSpyLogDelegator.java:524]- 2. Connection opened
+[11:51:10][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.new Connection returned 
+[11:51:10][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.new Connection returned 
+[11:51:10][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.getAutoCommit() returned true
+[11:51:10][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.getAutoCommit() returned true
+[11:51:10][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.new PreparedStatement returned 
+[11:51:10][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.new PreparedStatement returned 
+[11:51:10][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.prepareStatement(select * 
+			from (select rownum rnum, board_num, board_title, board_readcount
+       				 from (select * from board where board_lev = 1
+       				 order by board_readcount desc))
+			where rnum >= 1 and rnum <= 3) returned net.sf.log4jdbc.PreparedStatementSpy@5ad7a62b
+[11:51:10][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.prepareStatement(select * 
+			from (select rownum rnum, noticeno, noticetitle, noticedate
+       				 from (select * from notice order by noticedate desc, noticeno desc))
+			where rnum >= 1 and rnum <= 3) returned net.sf.log4jdbc.PreparedStatementSpy@2201487d
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:357]- select * from (select rownum rnum, noticeno, noticetitle, noticedate from (select * from notice 
+order by noticedate desc, noticeno desc)) where rnum >= 1 and rnum <= 3  {executed in 202 msec}
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.execute() returned true
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:357]- select * from (select rownum rnum, board_num, board_title, board_readcount from (select * from 
+board where board_lev = 1 order by board_readcount desc)) where rnum >= 1 and rnum <= 3  {executed in 202 msec}
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.execute() returned true
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.new ResultSet returned 
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@6ee20ed5
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.new ResultSet returned 
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@5b6694de
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@11e4f2fd
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@314c898a
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getType() returned 1003
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getType() returned 1003
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.isClosed() returned false
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.isClosed() returned false
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.next() returned true
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.next() returned true
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getInt(board_num) returned 13
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getInt(noticeno) returned 9
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(board_title) returned 설계방식3
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticetitle) returned 새공지글
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getInt(board_readcount) returned 11
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.isClosed() returned false
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getDate(noticedate) returned 2022-09-28
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.isClosed() returned false
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.next() returned true
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.next() returned true
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getInt(noticeno) returned 8
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticetitle) returned 새공지글
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getInt(board_num) returned 12
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getDate(noticedate) returned 2022-09-23
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(board_title) returned 설계방식2
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.isClosed() returned false
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getInt(board_readcount) returned 8
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.isClosed() returned false
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.next() returned true
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.next() returned true
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getInt(board_num) returned 19
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(board_title) returned 원글 등록
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getInt(board_readcount) returned 4
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.isClosed() returned false
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getInt(noticeno) returned 7
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticetitle) returned 공지 서비스 오픈7
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getDate(noticedate) returned 2022-09-21
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.isClosed() returned false
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.next() returned false
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.next() returned false
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.close() returned null
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.close() returned null
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@7e18a78
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@7856ce24
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@5adcc3f
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@6b2f4f0d
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.close() returned 
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.close() returned 
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:543]- 1. Connection closed
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.close() returned 
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:543]- 2. Connection closed
+[11:51:11][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.close() returned 
+[11:51:11][INFO ][BoardController.java:44]- btop3.do : 3
+[11:51:11][INFO ][NoticeController.java:72]- ntop3.do : 3
+[11:51:31][INFO ][TestController.java:64]- test2.do run...
+[11:51:31][INFO ][TestController.java:78]- 홍길동, 30
+[11:51:49][INFO ][TestController.java:64]- test2.do run...
+[11:51:49][INFO ][TestController.java:78]- 이순신, 30
+[11:52:03][INFO ][TestController.java:64]- test2.do run...
+[11:52:03][INFO ][TestController.java:78]- 홍길동, 30
+[12:09:13][INFO ][ContextLoader.java:271]- Root WebApplicationContext: initialization started
+[12:09:14][INFO ][ContextLoader.java:307]- Root WebApplicationContext initialized in 1285 ms
+[12:09:15][INFO ][FrameworkServlet.java:525]- Initializing Servlet 'appServlet'
+[12:09:16][INFO ][FrameworkServlet.java:547]- Completed initialization in 1838 ms
+[13:02:52][INFO ][ContextLoader.java:271]- Root WebApplicationContext: initialization started
+[13:02:53][INFO ][ContextLoader.java:307]- Root WebApplicationContext initialized in 1367 ms
+[13:02:53][INFO ][FrameworkServlet.java:525]- Initializing Servlet 'appServlet'
+[13:02:55][INFO ][FrameworkServlet.java:547]- Completed initialization in 1958 ms
+[13:03:12][INFO ][TestController.java:75]- test2.do run...
+[13:03:12][INFO ][TestController.java:89]- 홍길동, 1
+[13:03:15][INFO ][TestController.java:116]- test3.do run...
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:524]- 1. Connection opened
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.new Connection returned 
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.getAutoCommit() returned true
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.new PreparedStatement returned 
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.prepareStatement(select * from notice
+		where noticeno = (select max(noticeno)
+										from notice)) returned net.sf.log4jdbc.PreparedStatementSpy@2501e9aa
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:357]- select * from notice where noticeno = (select max(noticeno) from notice)  {executed in 209 msec}
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.execute() returned true
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.new ResultSet returned 
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@1fe5e5af
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@2927e23b
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getType() returned 1003
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.isClosed() returned false
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.next() returned true
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getInt(noticeno) returned 9
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticetitle) returned 새공지글
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getDate(noticedate) returned 2022-09-28
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticewriter) returned admin
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticecontent) returned 새 공지. 파일 업로드함. 
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(original_filepath) returned 공지사항 사이트 예시 1.png
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(rename_filepath) returned 20220928150331.png
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.isClosed() returned false
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.next() returned false
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.close() returned null
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@739f8ebd
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@72271362
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.close() returned 
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:543]- 1. Connection closed
+[13:03:16][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.close() returned 
+[13:04:03][INFO ][TestController.java:116]- test3.do run...
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:524]- 2. Connection opened
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.new Connection returned 
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.getAutoCommit() returned true
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.new PreparedStatement returned 
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.prepareStatement(select * from notice
+		where noticeno = (select max(noticeno)
+										from notice)) returned net.sf.log4jdbc.PreparedStatementSpy@5c96c506
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:357]- select * from notice where noticeno = (select max(noticeno) from notice)  {executed in 1 msec}
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.execute() returned true
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.new ResultSet returned 
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@4b7f7b1c
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@6e395b72
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getType() returned 1003
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.isClosed() returned false
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.next() returned true
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getInt(noticeno) returned 9
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticetitle) returned 새공지글
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getDate(noticedate) returned 2022-09-28
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticewriter) returned admin
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticecontent) returned 새 공지. 파일 업로드함. 
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(original_filepath) returned 공지사항 사이트 예시 1.png
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(rename_filepath) returned 20220928150331.png
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.isClosed() returned false
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.next() returned false
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.close() returned null
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@63ef03a2
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@72271362
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.close() returned 
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:543]- 2. Connection closed
+[13:04:03][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.close() returned 
+[13:07:01][INFO ][ContextLoader.java:271]- Root WebApplicationContext: initialization started
+[13:07:02][INFO ][ContextLoader.java:307]- Root WebApplicationContext initialized in 1273 ms
+[13:07:02][INFO ][FrameworkServlet.java:525]- Initializing Servlet 'appServlet'
+[13:07:04][INFO ][FrameworkServlet.java:547]- Completed initialization in 1845 ms
+[13:07:13][INFO ][TestController.java:116]- test3.do run...
+[13:07:13][INFO ][Slf4jSpyLogDelegator.java:524]- 1. Connection opened
+[13:07:13][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.new Connection returned 
+[13:07:13][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.getAutoCommit() returned true
+[13:07:14][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.new PreparedStatement returned 
+[13:07:14][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.prepareStatement(select * from notice
+		where noticeno = (select max(noticeno)
+										from notice)) returned net.sf.log4jdbc.PreparedStatementSpy@3212004e
+[13:07:14][INFO ][Slf4jSpyLogDelegator.java:357]- select * from notice where noticeno = (select max(noticeno) from notice)  {executed in 189 msec}
+[13:07:14][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.execute() returned true
+[13:07:14][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.new ResultSet returned 
+[13:07:14][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@176d43f
+[13:07:14][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@47c6f735
+[13:07:14][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getType() returned 1003
+[13:07:14][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.isClosed() returned false
+[13:07:14][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.next() returned true
+[13:07:14][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getInt(noticeno) returned 9
+[13:07:14][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticetitle) returned 새공지글
+[13:07:14][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getDate(noticedate) returned 2022-09-28
+[13:07:14][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticewriter) returned admin
+[13:07:14][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticecontent) returned 새 공지. 파일 업로드함. 
+[13:07:14][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(original_filepath) returned 공지사항 사이트 예시 1.png
+[13:07:14][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(rename_filepath) returned 20220928150331.png
+[13:07:14][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.isClosed() returned false
+[13:07:14][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.next() returned false
+[13:07:14][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.close() returned null
+[13:07:14][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@52c8ad7b
+[13:07:14][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@7338295f
+[13:07:14][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.close() returned 
+[13:07:14][INFO ][Slf4jSpyLogDelegator.java:543]- 1. Connection closed
+[13:07:14][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.close() returned 
+[13:11:52][INFO ][TestController.java:116]- test3.do run...
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:524]- 2. Connection opened
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.new Connection returned 
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.getAutoCommit() returned true
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.new PreparedStatement returned 
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.prepareStatement(select * from notice
+		where noticeno = (select max(noticeno)
+										from notice)) returned net.sf.log4jdbc.PreparedStatementSpy@70bcf932
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:357]- select * from notice where noticeno = (select max(noticeno) from notice)  {executed in 11 msec}
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.execute() returned true
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.new ResultSet returned 
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@7e7b1955
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@7a449242
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getType() returned 1003
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.isClosed() returned false
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.next() returned true
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getInt(noticeno) returned 9
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticetitle) returned 새공지글
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getDate(noticedate) returned 2022-09-28
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticewriter) returned admin
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticecontent) returned 새 공지. 파일 업로드함. 
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(original_filepath) returned 공지사항 사이트 예시 1.png
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(rename_filepath) returned 20220928150331.png
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.isClosed() returned false
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.next() returned false
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.close() returned null
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@3f46136e
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@7338295f
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.close() returned 
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:543]- 2. Connection closed
+[13:11:52][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.close() returned 
+[13:12:26][INFO ][TestController.java:116]- test3.do run...
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:524]- 3. Connection opened
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:171]- 3. Connection.new Connection returned 
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:171]- 3. Connection.getAutoCommit() returned true
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:171]- 3. PreparedStatement.new PreparedStatement returned 
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:171]- 3. Connection.prepareStatement(select * from notice
+		where noticeno = (select max(noticeno)
+										from notice)) returned net.sf.log4jdbc.PreparedStatementSpy@601d5e42
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:357]- select * from notice where noticeno = (select max(noticeno) from notice)  {executed in 1 msec}
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:171]- 3. PreparedStatement.execute() returned true
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.new ResultSet returned 
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:171]- 3. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@6edabc31
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@6ae53532
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.getType() returned 1003
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.isClosed() returned false
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.next() returned true
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.getInt(noticeno) returned 9
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.getString(noticetitle) returned 새공지글
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.getDate(noticedate) returned 2022-09-28
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.getString(noticewriter) returned admin
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.getString(noticecontent) returned 새 공지. 파일 업로드함. 
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.getString(original_filepath) returned 공지사항 사이트 예시 1.png
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.getString(rename_filepath) returned 20220928150331.png
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.isClosed() returned false
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.next() returned false
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.close() returned null
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:171]- 3. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@2fe7b60a
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:171]- 3. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@7338295f
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:171]- 3. PreparedStatement.close() returned 
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:543]- 3. Connection closed
+[13:12:26][INFO ][Slf4jSpyLogDelegator.java:171]- 3. Connection.close() returned 
+[14:12:28][INFO ][TestController.java:116]- test3.do run...
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:524]- 4. Connection opened
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:171]- 4. Connection.new Connection returned 
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:171]- 4. Connection.getAutoCommit() returned true
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:171]- 4. PreparedStatement.new PreparedStatement returned 
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:171]- 4. Connection.prepareStatement(select * from notice
+		where noticeno = (select max(noticeno)
+										from notice)) returned net.sf.log4jdbc.PreparedStatementSpy@46c1d6c7
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:357]- select * from notice where noticeno = (select max(noticeno) from notice)  {executed in 17 msec}
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:171]- 4. PreparedStatement.execute() returned true
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.new ResultSet returned 
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:171]- 4. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@1731d2b8
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@6951eb0
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getType() returned 1003
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.isClosed() returned false
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.next() returned true
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getInt(noticeno) returned 9
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getString(noticetitle) returned 새공지글
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getDate(noticedate) returned 2022-09-28
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getString(noticewriter) returned admin
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getString(noticecontent) returned 새 공지. 파일 업로드함. 
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getString(original_filepath) returned 공지사항 사이트 예시 1.png
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getString(rename_filepath) returned 20220928150331.png
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.isClosed() returned false
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.next() returned false
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.close() returned null
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:171]- 4. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@3793c84a
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:171]- 4. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@7338295f
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:171]- 4. PreparedStatement.close() returned 
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:543]- 4. Connection closed
+[14:12:28][INFO ][Slf4jSpyLogDelegator.java:171]- 4. Connection.close() returned 
+[14:12:34][INFO ][TestController.java:116]- test3.do run...
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:524]- 5. Connection opened
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:171]- 5. Connection.new Connection returned 
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:171]- 5. Connection.getAutoCommit() returned true
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:171]- 5. PreparedStatement.new PreparedStatement returned 
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:171]- 5. Connection.prepareStatement(select * from notice
+		where noticeno = (select max(noticeno)
+										from notice)) returned net.sf.log4jdbc.PreparedStatementSpy@41a5bdb8
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:357]- select * from notice where noticeno = (select max(noticeno) from notice)  {executed in 1 msec}
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:171]- 5. PreparedStatement.execute() returned true
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.new ResultSet returned 
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:171]- 5. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@4f625bfc
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@4b5dd6c8
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.getType() returned 1003
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.isClosed() returned false
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.next() returned true
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.getInt(noticeno) returned 9
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.getString(noticetitle) returned 새공지글
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.getDate(noticedate) returned 2022-09-28
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.getString(noticewriter) returned admin
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.getString(noticecontent) returned 새 공지. 파일 업로드함. 
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.getString(original_filepath) returned 공지사항 사이트 예시 1.png
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.getString(rename_filepath) returned 20220928150331.png
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.isClosed() returned false
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.next() returned false
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:171]- 5. ResultSet.close() returned null
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:171]- 5. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@e5f51c7
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:171]- 5. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@7338295f
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:171]- 5. PreparedStatement.close() returned 
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:543]- 5. Connection closed
+[14:12:34][INFO ][Slf4jSpyLogDelegator.java:171]- 5. Connection.close() returned 
+[14:12:42][INFO ][TestController.java:116]- test3.do run...
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:524]- 6. Connection opened
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:171]- 6. Connection.new Connection returned 
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:171]- 6. Connection.getAutoCommit() returned true
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:171]- 6. PreparedStatement.new PreparedStatement returned 
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:171]- 6. Connection.prepareStatement(select * from notice
+		where noticeno = (select max(noticeno)
+										from notice)) returned net.sf.log4jdbc.PreparedStatementSpy@e330d3d
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:357]- select * from notice where noticeno = (select max(noticeno) from notice)  {executed in 2 msec}
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:171]- 6. PreparedStatement.execute() returned true
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:171]- 6. ResultSet.new ResultSet returned 
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:171]- 6. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@50bb483b
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:171]- 6. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@5f69ec21
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:171]- 6. ResultSet.getType() returned 1003
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:171]- 6. ResultSet.isClosed() returned false
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:171]- 6. ResultSet.next() returned true
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:171]- 6. ResultSet.getInt(noticeno) returned 9
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:171]- 6. ResultSet.getString(noticetitle) returned 새공지글
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:171]- 6. ResultSet.getDate(noticedate) returned 2022-09-28
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:171]- 6. ResultSet.getString(noticewriter) returned admin
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:171]- 6. ResultSet.getString(noticecontent) returned 새 공지. 파일 업로드함. 
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:171]- 6. ResultSet.getString(original_filepath) returned 공지사항 사이트 예시 1.png
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:171]- 6. ResultSet.getString(rename_filepath) returned 20220928150331.png
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:171]- 6. ResultSet.isClosed() returned false
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:171]- 6. ResultSet.next() returned false
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:171]- 6. ResultSet.close() returned null
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:171]- 6. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@570375f1
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:171]- 6. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@7338295f
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:171]- 6. PreparedStatement.close() returned 
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:543]- 6. Connection closed
+[14:12:42][INFO ][Slf4jSpyLogDelegator.java:171]- 6. Connection.close() returned 
+[14:12:51][INFO ][TestController.java:116]- test3.do run...
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:524]- 7. Connection opened
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:171]- 7. Connection.new Connection returned 
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:171]- 7. Connection.getAutoCommit() returned true
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:171]- 7. PreparedStatement.new PreparedStatement returned 
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:171]- 7. Connection.prepareStatement(select * from notice
+		where noticeno = (select max(noticeno)
+										from notice)) returned net.sf.log4jdbc.PreparedStatementSpy@41576c9b
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:357]- select * from notice where noticeno = (select max(noticeno) from notice)  {executed in 1 msec}
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:171]- 7. PreparedStatement.execute() returned true
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.new ResultSet returned 
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:171]- 7. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@2318af0
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@ff1e88a
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getType() returned 1003
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.isClosed() returned false
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.next() returned true
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getInt(noticeno) returned 9
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(noticetitle) returned 새공지글
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getDate(noticedate) returned 2022-09-28
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(noticewriter) returned admin
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(noticecontent) returned 새 공지. 파일 업로드함. 
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(original_filepath) returned 공지사항 사이트 예시 1.png
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.getString(rename_filepath) returned 20220928150331.png
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.isClosed() returned false
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.next() returned false
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:171]- 7. ResultSet.close() returned null
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:171]- 7. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@67cd5e7c
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:171]- 7. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@7338295f
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:171]- 7. PreparedStatement.close() returned 
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:543]- 7. Connection closed
+[14:12:51][INFO ][Slf4jSpyLogDelegator.java:171]- 7. Connection.close() returned 
+[14:12:58][INFO ][TestController.java:116]- test3.do run...
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:524]- 8. Connection opened
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:171]- 8. Connection.new Connection returned 
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:171]- 8. Connection.getAutoCommit() returned true
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:171]- 8. PreparedStatement.new PreparedStatement returned 
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:171]- 8. Connection.prepareStatement(select * from notice
+		where noticeno = (select max(noticeno)
+										from notice)) returned net.sf.log4jdbc.PreparedStatementSpy@60243457
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:357]- select * from notice where noticeno = (select max(noticeno) from notice)  {executed in 0 msec}
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:171]- 8. PreparedStatement.execute() returned true
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:171]- 8. ResultSet.new ResultSet returned 
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:171]- 8. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@70e12785
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:171]- 8. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@6f755667
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:171]- 8. ResultSet.getType() returned 1003
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:171]- 8. ResultSet.isClosed() returned false
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:171]- 8. ResultSet.next() returned true
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:171]- 8. ResultSet.getInt(noticeno) returned 9
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:171]- 8. ResultSet.getString(noticetitle) returned 새공지글
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:171]- 8. ResultSet.getDate(noticedate) returned 2022-09-28
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:171]- 8. ResultSet.getString(noticewriter) returned admin
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:171]- 8. ResultSet.getString(noticecontent) returned 새 공지. 파일 업로드함. 
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:171]- 8. ResultSet.getString(original_filepath) returned 공지사항 사이트 예시 1.png
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:171]- 8. ResultSet.getString(rename_filepath) returned 20220928150331.png
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:171]- 8. ResultSet.isClosed() returned false
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:171]- 8. ResultSet.next() returned false
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:171]- 8. ResultSet.close() returned null
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:171]- 8. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@17ab0b8c
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:171]- 8. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@7338295f
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:171]- 8. PreparedStatement.close() returned 
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:543]- 8. Connection closed
+[14:12:58][INFO ][Slf4jSpyLogDelegator.java:171]- 8. Connection.close() returned 
+[14:20:34][INFO ][TestController.java:75]- test2.do run...
+[14:20:34][INFO ][TestController.java:89]- 강처치, 4
+[14:20:47][INFO ][TestController.java:75]- test2.do run...
+[14:20:47][INFO ][TestController.java:89]- 홍길동, 4
+[14:20:50][INFO ][TestController.java:116]- test3.do run...
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:524]- 9. Connection opened
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 9. Connection.new Connection returned 
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 9. Connection.getAutoCommit() returned true
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 9. PreparedStatement.new PreparedStatement returned 
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 9. Connection.prepareStatement(select * from notice
+		where noticeno = (select max(noticeno)
+										from notice)) returned net.sf.log4jdbc.PreparedStatementSpy@19f00a45
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:357]- select * from notice where noticeno = (select max(noticeno) from notice)  {executed in 16 msec}
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 9. PreparedStatement.execute() returned true
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.new ResultSet returned 
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 9. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@3c518d4a
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@755a44c4
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getType() returned 1003
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.isClosed() returned false
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.next() returned true
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getInt(noticeno) returned 9
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(noticetitle) returned 새공지글
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getDate(noticedate) returned 2022-09-28
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(noticewriter) returned admin
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(noticecontent) returned 새 공지. 파일 업로드함. 
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(original_filepath) returned 공지사항 사이트 예시 1.png
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.getString(rename_filepath) returned 20220928150331.png
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.isClosed() returned false
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.next() returned false
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 9. ResultSet.close() returned null
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 9. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@43d0f5f2
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 9. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@7338295f
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 9. PreparedStatement.close() returned 
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:543]- 9. Connection closed
+[14:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 9. Connection.close() returned 
+[15:06:12][INFO ][ContextLoader.java:271]- Root WebApplicationContext: initialization started
+[15:06:13][INFO ][ContextLoader.java:307]- Root WebApplicationContext initialized in 1333 ms
+[15:06:13][INFO ][FrameworkServlet.java:525]- Initializing Servlet 'appServlet'
+[15:06:15][INFO ][FrameworkServlet.java:547]- Completed initialization in 1803 ms
+[15:06:41][INFO ][TestController.java:155]- test4.do run...
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:524]- 1. Connection opened
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.new Connection returned 
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.getAutoCommit() returned true
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.new PreparedStatement returned 
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.prepareStatement(select * from notice
+		where noticetitle like '%' || ? || '%'
+		order by noticeno desc) returned net.sf.log4jdbc.PreparedStatementSpy@7d59407f
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.setString(1, "서비스") returned 
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:357]- select * from notice where noticetitle like '%' || '서비스' || '%' order by noticeno desc  {executed in 199 msec}
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.execute() returned true
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.new ResultSet returned 
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@5a61e538
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@4e7b2dcb
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getType() returned 1003
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.isClosed() returned false
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.next() returned true
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getInt(noticeno) returned 7
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticetitle) returned 공지 서비스 오픈7
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getDate(noticedate) returned 2022-09-21
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticewriter) returned admin
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticecontent) returned 공지 서비스가 오픈되었습니다. 많이 이용해 주세요.
+새로 글 추가 했습니다.
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(original_filepath) returned null
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(rename_filepath) returned null
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.isClosed() returned false
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.next() returned true
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getInt(noticeno) returned 6
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticetitle) returned 공지 서비스 오픈6
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getDate(noticedate) returned 2022-09-21
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticewriter) returned admin
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticecontent) returned 공지 서비스가 오픈되었습니다. 많이 이용해 주세요.
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(original_filepath) returned null
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(rename_filepath) returned null
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.isClosed() returned false
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.next() returned true
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getInt(noticeno) returned 5
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticetitle) returned 공지 서비스 오픈5
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getDate(noticedate) returned 2022-09-21
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticewriter) returned admin
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticecontent) returned 공지 서비스가 오픈되었습니다. 많이 이용해 주세요.
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(original_filepath) returned null
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(rename_filepath) returned null
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.isClosed() returned false
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.next() returned true
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getInt(noticeno) returned 4
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticetitle) returned 공지 서비스 오픈4
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getDate(noticedate) returned 2022-09-21
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticewriter) returned admin
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticecontent) returned 공지 서비스가 오픈되었습니다. 많이 이용해 주세요.
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(original_filepath) returned null
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(rename_filepath) returned null
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.isClosed() returned false
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.next() returned true
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getInt(noticeno) returned 3
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticetitle) returned 공지 서비스 오픈3
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getDate(noticedate) returned 2022-09-21
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticewriter) returned admin
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticecontent) returned 공지 서비스가 오픈되었습니다. 많이 이용해 주세요.
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(original_filepath) returned null
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(rename_filepath) returned null
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.isClosed() returned false
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.next() returned true
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getInt(noticeno) returned 2
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticetitle) returned 공지 서비스 오픈2
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getDate(noticedate) returned 2022-09-21
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticewriter) returned admin
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticecontent) returned 공지 서비스가 오픈되었습니다. 많이 이용해 주세요.
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(original_filepath) returned null
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(rename_filepath) returned null
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.isClosed() returned false
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.next() returned true
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getInt(noticeno) returned 1
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticetitle) returned 공지 서비스 오픈
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getDate(noticedate) returned 2022-09-21
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticewriter) returned admin
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(noticecontent) returned 공지 서비스가 오픈되었습니다. 많이 이용해 주세요.
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(original_filepath) returned null
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.getString(rename_filepath) returned null
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.isClosed() returned false
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.next() returned false
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. ResultSet.close() returned null
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@4705b45b
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@6b98ac1a
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.close() returned 
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:543]- 1. Connection closed
+[15:06:42][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.close() returned 
+[15:09:07][INFO ][TestController.java:155]- test4.do run...
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:524]- 2. Connection opened
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.new Connection returned 
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.getAutoCommit() returned true
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.new PreparedStatement returned 
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.prepareStatement(select * from notice
+		where noticetitle like '%' || ? || '%'
+		order by noticeno desc) returned net.sf.log4jdbc.PreparedStatementSpy@55f4275d
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.setString(1, "서비스") returned 
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:357]- select * from notice where noticetitle like '%' || '서비스' || '%' order by noticeno desc  {executed in 15 msec}
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.execute() returned true
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.new ResultSet returned 
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@5b33d393
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@5f0c4c2d
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getType() returned 1003
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.isClosed() returned false
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.next() returned true
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getInt(noticeno) returned 7
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticetitle) returned 공지 서비스 오픈7
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getDate(noticedate) returned 2022-09-21
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticewriter) returned admin
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticecontent) returned 공지 서비스가 오픈되었습니다. 많이 이용해 주세요.
+새로 글 추가 했습니다.
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(original_filepath) returned null
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(rename_filepath) returned null
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.isClosed() returned false
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.next() returned true
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getInt(noticeno) returned 6
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticetitle) returned 공지 서비스 오픈6
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getDate(noticedate) returned 2022-09-21
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticewriter) returned admin
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticecontent) returned 공지 서비스가 오픈되었습니다. 많이 이용해 주세요.
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(original_filepath) returned null
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(rename_filepath) returned null
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.isClosed() returned false
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.next() returned true
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getInt(noticeno) returned 5
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticetitle) returned 공지 서비스 오픈5
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getDate(noticedate) returned 2022-09-21
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticewriter) returned admin
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticecontent) returned 공지 서비스가 오픈되었습니다. 많이 이용해 주세요.
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(original_filepath) returned null
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(rename_filepath) returned null
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.isClosed() returned false
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.next() returned true
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getInt(noticeno) returned 4
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticetitle) returned 공지 서비스 오픈4
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getDate(noticedate) returned 2022-09-21
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticewriter) returned admin
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticecontent) returned 공지 서비스가 오픈되었습니다. 많이 이용해 주세요.
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(original_filepath) returned null
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(rename_filepath) returned null
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.isClosed() returned false
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.next() returned true
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getInt(noticeno) returned 3
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticetitle) returned 공지 서비스 오픈3
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getDate(noticedate) returned 2022-09-21
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticewriter) returned admin
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticecontent) returned 공지 서비스가 오픈되었습니다. 많이 이용해 주세요.
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(original_filepath) returned null
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(rename_filepath) returned null
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.isClosed() returned false
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.next() returned true
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getInt(noticeno) returned 2
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticetitle) returned 공지 서비스 오픈2
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getDate(noticedate) returned 2022-09-21
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticewriter) returned admin
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticecontent) returned 공지 서비스가 오픈되었습니다. 많이 이용해 주세요.
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(original_filepath) returned null
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(rename_filepath) returned null
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.isClosed() returned false
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.next() returned true
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getInt(noticeno) returned 1
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticetitle) returned 공지 서비스 오픈
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getDate(noticedate) returned 2022-09-21
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticewriter) returned admin
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(noticecontent) returned 공지 서비스가 오픈되었습니다. 많이 이용해 주세요.
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(original_filepath) returned null
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.getString(rename_filepath) returned null
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.isClosed() returned false
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.next() returned false
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. ResultSet.close() returned null
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@1a0ed9a8
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@6b98ac1a
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. PreparedStatement.close() returned 
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:543]- 2. Connection closed
+[15:09:07][INFO ][Slf4jSpyLogDelegator.java:171]- 2. Connection.close() returned 
+[15:20:50][INFO ][TestController.java:155]- test4.do run...
+[15:20:50][INFO ][Slf4jSpyLogDelegator.java:524]- 3. Connection opened
+[15:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 3. Connection.new Connection returned 
+[15:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 3. Connection.getAutoCommit() returned true
+[15:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 3. PreparedStatement.new PreparedStatement returned 
+[15:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 3. Connection.prepareStatement(select * from notice
+		where noticetitle like '%' || ? || '%'
+		order by noticeno desc) returned net.sf.log4jdbc.PreparedStatementSpy@357fef71
+[15:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 3. PreparedStatement.setString(1, "admin") returned 
+[15:20:50][INFO ][Slf4jSpyLogDelegator.java:357]- select * from notice where noticetitle like '%' || 'admin' || '%' order by noticeno desc  {executed in 17 msec}
+[15:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 3. PreparedStatement.execute() returned true
+[15:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.new ResultSet returned 
+[15:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 3. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@3bb807ae
+[15:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@3f878401
+[15:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.getType() returned 1003
+[15:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.isClosed() returned false
+[15:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.next() returned false
+[15:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 3. ResultSet.close() returned null
+[15:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 3. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@7a850d95
+[15:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 3. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@6b98ac1a
+[15:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 3. PreparedStatement.close() returned 
+[15:20:50][INFO ][Slf4jSpyLogDelegator.java:543]- 3. Connection closed
+[15:20:50][INFO ][Slf4jSpyLogDelegator.java:171]- 3. Connection.close() returned 
+[15:23:20][INFO ][TestController.java:119]- test3.do run...
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:524]- 4. Connection opened
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:171]- 4. Connection.new Connection returned 
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:171]- 4. Connection.getAutoCommit() returned true
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:171]- 4. PreparedStatement.new PreparedStatement returned 
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:171]- 4. Connection.prepareStatement(select * from notice
+		where noticeno = (select max(noticeno)
+										from notice)) returned net.sf.log4jdbc.PreparedStatementSpy@310a49b2
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:357]- select * from notice where noticeno = (select max(noticeno) from notice)  {executed in 2 msec}
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:171]- 4. PreparedStatement.execute() returned true
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.new ResultSet returned 
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:171]- 4. PreparedStatement.getResultSet() returned net.sf.log4jdbc.ResultSetSpy@7128b340
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getMetaData() returned oracle.jdbc.driver.OracleResultSetMetaData@604e10c8
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getType() returned 1003
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.isClosed() returned false
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.next() returned true
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getInt(noticeno) returned 9
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getString(noticetitle) returned 새공지글
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getDate(noticedate) returned 2022-09-28
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getString(noticewriter) returned admin
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getString(noticecontent) returned 새 공지. 파일 업로드함. 
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getString(original_filepath) returned 공지사항 사이트 예시 1.png
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.getString(rename_filepath) returned 20220928150331.png
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.isClosed() returned false
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.next() returned false
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:171]- 4. ResultSet.close() returned null
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:171]- 4. PreparedStatement.getConnection() returned net.sf.log4jdbc.ConnectionSpy@7eba1c57
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:171]- 4. Connection.getMetaData() returned org.apache.commons.dbcp.DelegatingDatabaseMetaData@6b98ac1a
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:171]- 4. PreparedStatement.close() returned 
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:543]- 4. Connection closed
+[15:23:20][INFO ][Slf4jSpyLogDelegator.java:171]- 4. Connection.close() returned 
+[15:23:23][INFO ][TestController.java:78]- test2.do run...
+[16:03:46][INFO ][ContextLoader.java:271]- Root WebApplicationContext: initialization started
+[16:03:47][INFO ][ContextLoader.java:307]- Root WebApplicationContext initialized in 1283 ms
+[16:03:47][INFO ][FrameworkServlet.java:525]- Initializing Servlet 'appServlet'
+[16:03:49][INFO ][FrameworkServlet.java:547]- Completed initialization in 1809 ms
+[16:04:35][INFO ][TestController.java:207]- test5.do run()...
+[16:04:36][INFO ][Slf4jSpyLogDelegator.java:524]- 1. Connection opened
+[16:04:36][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.new Connection returned 
+[16:04:36][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.getAutoCommit() returned true
+[16:04:36][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.new PreparedStatement returned 
+[16:04:36][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.prepareStatement(insert into notice (noticeno, noticetitle, noticewriter, 
+			noticedate, original_filepath, rename_filepath, noticecontent) 
+			values ((select max(noticeno) + 1 from notice), 
+						?, ?, sysdate, ?, 
+						?, ?)) returned net.sf.log4jdbc.PreparedStatementSpy@69340c47
+[16:04:36][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.setString(1, "ajax 공지 등록 테스트") returned 
+[16:04:36][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.setString(2, "admin") returned 
+[16:04:36][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.setNull(3, 12) returned 
+[16:04:36][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.setNull(4, 12) returned 
+[16:04:36][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.setString(5, "ajax 로 공지 등록되는지 확인") returned 
+[16:04:36][INFO ][Slf4jSpyLogDelegator.java:357]- insert into notice (noticeno, noticetitle, noticewriter, noticedate, original_filepath, rename_filepath, 
+noticecontent) values ((select max(noticeno) + 1 from notice), 'ajax 공지 등록 테스트', 'admin', sysdate, 
+NULL, NULL, 'ajax 로 공지 등록되는지 확인')  {executed in 32 msec}
+[16:04:36][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.execute() returned false
+[16:04:36][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.getUpdateCount() returned 1
+[16:04:36][INFO ][Slf4jSpyLogDelegator.java:171]- 1. PreparedStatement.close() returned 
+[16:04:36][INFO ][Slf4jSpyLogDelegator.java:543]- 1. Connection closed
+[16:04:36][INFO ][Slf4jSpyLogDelegator.java:171]- 1. Connection.close() returned 
+[16:30:51][INFO ][ContextLoader.java:271]- Root WebApplicationContext: initialization started
+[16:30:52][INFO ][ContextLoader.java:307]- Root WebApplicationContext initialized in 1408 ms
+[16:30:52][INFO ][FrameworkServlet.java:525]- Initializing Servlet 'appServlet'
+[16:30:54][INFO ][FrameworkServlet.java:547]- Completed initialization in 1885 ms
